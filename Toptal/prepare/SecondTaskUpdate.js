@@ -1,6 +1,38 @@
 // Toptal
 // Second Task
 
+// From an integer X representing a time duration in seconds produce a simplified string representation.
+// For example, given:
+// 100
+// You should output:
+// "1m40s"
+// Use the following abbreviations w,d,h,m,storepresent:
+// * 1w is 1 week
+// * 1d is 1 day
+// * 1h is 1 hour
+// * 1m is 1 minute
+// * 1s is 1 second
+// Only the two largest non-zero units should be used. Round up the second
+// unit if necessary so that the output only has two units even though this
+// might mean the output is for slightly more time than X seconds.
+// Write a function:
+// function solution(X);
+// that, given an integer X, returns a string representing the duration.
+// Examples:
+// 1. Given X=100, return "1m40s"
+// 2. Given X=7263, return "2h2m". (7263s=2h1m3s, but this uses too many units, so we round the second largest unit up to 2h2m)
+// 3. Given X=0, return "0s"
+// 4. Given X=1, return "1s"
+// 5. Given X=60, return "1m"
+// 6. Given X=3600, return "1h"
+// 7. Given X=86400, return "1d"
+// 8. Given X=86399, return "1d". (86399=23h60m59s, but this uses too many units, so we round the second largest unit up to 1d)
+// 9. Given X=604800, return "1w"
+// 10. Given X=604799, return "1W". (604799=6d23h60m59s, but this uses too many units, so we round the second largest unit up to 1W)
+// 11. Given X=6263, return "1h46m" . (6263=1h44m23s, but this uses too many units, so we round the second largest unit up to 1h46m)
+// 12. Given X=604799, return "1w" . (604799=6d23h60m59s, but this uses too many units, so we round the second largest unit up to 1w)
+
+
 function solution(X) {
     // write your code in JavaScript (Node.js 8.9.4)
     if (X <= 0) {
@@ -82,4 +114,4 @@ console.log('60: return 1m => ', solution(60));
 console.log('86400: return 1d => ', solution(86400));
 console.log('86399: return 1d (23h60m59s) => ', solution(86399));
 console.log('604800: return 1w => ', solution(604800));
-console.log('604799: retutn 1w (6d23h60m59s)', solution(604799));
+console.log('604799: retutn 1w (6d23h60m59s) => ', solution(604799));
