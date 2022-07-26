@@ -15,15 +15,8 @@
 
 
 firstMissingPositive = (nums) => {
-    let result = 1;
-    nums = nums.sort((a, b) => a - b);
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] > result) break;
-        if (nums[i] === result) {
-            result++;
-        }
-    }
-    return result;
+    // Solution Pending
+    
 }
 
 console.log(firstMissingPositive([60,70,80,90]));
@@ -32,3 +25,33 @@ console.log(firstMissingPositive([1, 2, 0]));
 console.log(firstMissingPositive([3, 4, -1, 1]));
 console.log(firstMissingPositive([7, 8, 9, 11, 12]));
 console.log(firstMissingPositive([-1, -3]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// firstMissingPositive = (nums) => {
+//     let result = 1;
+//     nums = nums.sort((a, b) => a - b);
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] > result) break;
+//         if (nums[i] === result) {
+//             result++;
+//         }
+//     }
+//     return result;
+// }
