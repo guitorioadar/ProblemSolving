@@ -115,3 +115,44 @@ console.log('86400: return 1d => ', solution(86400));
 console.log('86399: return 1d (23h60m59s) => ', solution(86399));
 console.log('604800: return 1w => ', solution(604800));
 console.log('604799: retutn 1w (6d23h60m59s) => ', solution(604799));
+
+
+
+
+
+// Submitted Answer
+// function solution(X) {
+//     // write your code in JavaScript (Node.js 8.9.4)
+//     let count = 0;
+//     let seconds = X % 60;
+//     let minutes = Math.floor(X / 60) % 60;
+//     let hours = Math.floor(X / 3600) % 24;
+//     let days = Math.floor(X / 86400) % 7;
+//     let weeks = Math.floor(X / 604800);
+//     let result = "";
+
+//     if(X <= 0){
+//         return 0+'s';
+//     }
+//     if (count < 2 && weeks > 0) {
+//         result += weeks + "w";
+//         count++;
+//     }
+//     if (count < 2 && days > 0) {
+//         result += days + "d";
+//         count++;
+//     }
+//     if (count < 2 && hours > 0) {
+//         result += hours + "h";
+//         count++;
+//     }
+//     if (count < 2 && minutes > 0) {
+//         result += minutes + "m";
+//         count++;
+//     }
+//     if (count < 2 && seconds > 0) {
+//         result += seconds + "s";
+//         count++;
+//     }
+//     return result;
+// }
