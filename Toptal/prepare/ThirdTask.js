@@ -19,9 +19,9 @@
 
 // Given S="300.01 and B=["300.00","200.00","100.00"].
 
-// R[0]="150.00" (=300.01 300.00/600.00) 
-// R[1]="100.00" (=150.01 200.00/300.00)
-// R[2]="50.01 (=50.01 100.00/100.00)
+// R[0]="150.00" (=300.01*300.00/600.00) 
+// R[1]="100.00" (=150.01*200.00/300.00)
+// R[2]="50.01 (=50.01*100.00/100.00)
 
 // Example 2 (Pay careful attention to this one).
 
@@ -50,7 +50,7 @@
 // in the same order as B representing the amount of the discount to each customer.
 
 // Notes:
-// 1. The total S should be completely refunded. Neither more nor less than S should he returned. 
+// 1. The total S should be completely refunded. Neither more nor less than S should be returned. 
 // Don't lose or gain a penny!
 
 // 2. Be careful with the types you choose to represent currencies. 
@@ -68,13 +68,29 @@
 // 6. Please do pay attention to returning the discounts in the same order as the incoming invoices.
 
 
+
 function solution(S, B) {
     // write your code in JavaScript (Node.js 8.9.4)
-
-
     
+    let total = parseFloat(S);
+    let bills = B.sort((a,b)=>(b-a)).map(b => parseFloat(b));
+    let sum = bills.reduce((a, b) => a + b, 0);
+    let result = [];
+    let remaining = total;
+    for (let i = 0; i < bills.length; i++) {
+        let bill = bills[i];
+        let discount;
+        if (i==0){
+            discount =  remaining * bill / sum;
+        }else{
+            discount =  remaining * bill / (sum = sum-bills[i-1]);
+        }
+        result.push(discount.toFixed(2));
+        remaining -= discount;
+    }
+    return result;
 }
 
-console.log(solution("300.01", ["300.00", "200.00", "100.00"]));
+console.log(solution("300.01", ["200.00", "300.00", "100.00"]));
 console.log(solution("1.00", ["0.05", "1.00"]));
 console.log(solution("1.00", ["0.05", "1.00", "0.05"]));
