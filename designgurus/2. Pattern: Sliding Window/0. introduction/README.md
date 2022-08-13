@@ -18,7 +18,7 @@ Output: [2.2, 2.8, 2.4, 3.6, 2.8]
 A brute-force algorithm will calculate the sum of every 5-element subarray of the given array and divide the sum by ‘5’ to find the average. This is what the algorithm will look like:
 
 Java
-
+```
 import java.util.Arrays;
 
 class AverageOfSubarrayOfSizeK {
@@ -41,8 +41,9 @@ class AverageOfSubarrayOfSizeK {
     System.out.println("Averages of subarrays of size K: " + Arrays.toString(result));
   }
 }
+```
 Python3
-
+```
 def find_averages_of_subarrays(K, arr):
     result = []
     for i in range(len(arr)-K+1):
@@ -61,9 +62,9 @@ def main():
 
 
 main()
-
+```
 C++
-
+```
 using namespace std;
 
 #include <iostream>
@@ -101,8 +102,9 @@ int main(int argc, char *argv[])
     }
     cout << endl;
 }
+```
 JS
-
+```
 function find_averages_of_subarrays(K, arr) {
     const result = [];
     for (let i = 0; i < arr.length - K + 1; i++) {
@@ -120,7 +122,7 @@ function find_averages_of_subarrays(K, arr) {
 
 const result = find_averages_of_subarrays(5, [1, 3, 2, 6, -1, 4, 1, 8, 2]);
 console.log(`Averages of subarrays of size K: ${result}`);
-
+```
 Time complexity: Since for every element of the input array, we are calculating the sum of its next ‘K’ elements, the time complexity of the above algorithm will be O(N*K)O(N∗K) where ‘N’ is the number of elements in the input array.
 
 Can we find a better solution? Do you see any inefficiency in the above approach?
@@ -250,12 +252,11 @@ JS
 
     return result;
 }
-```
 
 
 const result = find_averages_of_subarrays(5, [1, 3, 2, 6, -1, 4, 1, 8, 2]);
 console.log(`Averages of subarrays of size K: ${result}`);
-
+```
 
 In the following chapters, we will apply the Sliding Window approach to solve a few problems.
 
