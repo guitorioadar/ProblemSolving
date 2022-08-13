@@ -25,7 +25,7 @@ Code
 Here is what our algorithm will look like:
 
 Java
-
+```
 class MaxSumSubArrayOfSizeK {
     public static int findMaxSumSubArray(int k, int[] arr) {
         int maxSum = 0, windowSum;
@@ -47,8 +47,9 @@ class MaxSumSubArrayOfSizeK {
                 + MaxSumSubArrayOfSizeK.findMaxSumSubArray(2, new int[] { 2, 3, 4, 1, 5 }));
     }
 }
+```
 Python3
-
+```
 def max_sub_array_of_size_k(k, arr):
     max_sum = 0
     window_sum = 0
@@ -69,9 +70,9 @@ def main():
 
 
 main()
-
+```
 C++
-
+```
 using namespace std;
 
 #include <iostream>
@@ -106,9 +107,10 @@ int main(int argc, char *argv[])
          << MaxSumSubArrayOfSizeK::findMaxSumSubArray(2, vector<int>{2, 3, 4, 1, 5})
          << endl;
 }
+```
 
 JS
-
+```
 function max_sub_array_of_size_k(k, arr) {
     let maxSum = 0,
         windowSum = 0;
@@ -128,7 +130,7 @@ console.log(
     `Maximum sum of a subarray of size K: ${max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2])}`);
 console.log(
     `Maximum sum of a subarray of size K: ${max_sub_array_of_size_k(2, [2, 3, 4, 1, 5])}`);
-
+```
 The above algorithm’s time complexity will be O(N∗K), where ‘N’ is the total number of elements in the given array. Is it possible to find a better algorithm than this?
 
 A better approach
