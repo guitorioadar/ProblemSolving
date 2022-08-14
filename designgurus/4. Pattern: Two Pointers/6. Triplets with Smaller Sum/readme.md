@@ -180,15 +180,11 @@ console.log(triplet_with_smaller_sum([-1, 4, 2, 1, 3], 5));
 Time Complexity
 
 
-Sorting the array will take O(N * logN)O(N∗logN). The searchPair() will take O(N)O(N). So, overall searchTriplets() will take O(N * logN + N^2)O(N∗logN+N
-​2
-​​ ), which is asymptotically equivalent to O(N^2)O(N
-​2
-​​ ).
+Sorting the array will take O(N * logN). The searchPair() will take O(N^2). So, overall searchTriplets() will take O(N * logN + N^2), which is asymptotically equivalent to O(N^2).
 
 Space Complexity
 
-The space complexity of the above algorithm will be O(N)O(N) which is required for sorting if we are not using an in-place sorting algorithm.
+The space complexity of the above algorithm will be O(N) which is required for sorting if we are not using an in-place sorting algorithm.
 
 
 Similar Problems
@@ -358,7 +354,6 @@ function search_pair(arr, target_sum, first, triplets) {
     }
   }
 }
-
 
 console.log(triplet_with_smaller_sum([-1, 0, 2, 3], 3));
 console.log(triplet_with_smaller_sum([-1, 4, 2, 1, 3], 5));
