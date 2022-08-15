@@ -15,8 +15,8 @@
 
 
 firstMissingPositive = (nums) => {
-    // Solution Pending
-    
+    // Solution Pending need to solve this problem
+
 }
 
 console.log(firstMissingPositive([60,70,80,90]));
